@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="tampil.css">
     <title>Pemrograman3.com</title>
 </head>
 
 <body>
     <h2>Pemrograman 3 2023</h2>
     <br>
-    <a href="input_krs.php">+ TAMBAH KRS</a>
+    <a type="button" href="input_krs.php">+ TAMBAH KRS</a>
     <br>
     <table border='1'>
         <tr>
@@ -18,7 +19,6 @@
             <th>Nama Mahasiswa</th>
             <th>Mata Kuliah</th>
             <th>SKS</th>
-            <th>OPSI</th>
         </tr>
         <?php
         include 'koneksi.php';
@@ -31,10 +31,6 @@
                 <td><?php echo $d['nama_mhs']; ?></td>
                 <td><?php echo $d['nama']; ?></td>
                 <td><?php echo $d['jml_sks']; ?></td>
-                    <td>
-                        <a href="edit_transaksi.php?id=<?php echo $d['id']; ?>">EDIT</a> |
-                        <a href="hapus_transaksi.php?id=<?php echo $d['id']; ?>">HAPUS</a>
-                    </td>
             </tr>
         <?php
         }
